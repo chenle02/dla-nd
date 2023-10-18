@@ -18,7 +18,7 @@ fi
 # 2. writes a 1000x1000 pixel PNG image out every 10 steps,
 # 3. in which the particles are rendered onto a density field that spans -3..3 in x and y.
 
-../../dla-nd/build/dla-2d -p 0 0 -every 10 -end 20000 -zone -3 3 -3 3 -dens -res 2000
+../../build/dla-2d -p 0 0 -every 10 -end 20000 -zone -3 3 -3 3 -dens -res 2000
 
 # Convert to a movie file.
 ffmpeg -y -framerate 24 -i dens_%04d.png -c:v libx264 -pix_fmt yuv420p output.mp4
